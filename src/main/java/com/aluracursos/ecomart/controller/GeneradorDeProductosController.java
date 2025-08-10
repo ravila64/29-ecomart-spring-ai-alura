@@ -1,6 +1,5 @@
 package com.aluracursos.ecomart.controller;
 
-
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -17,7 +16,9 @@ public class GeneradorDeProductosController {
    }
 
    @GetMapping   // estaba ("/ai")
-   public String generadorDeProductos(String userInput) {
+   public String generadorDeProductos() {
+      // String userInput, quite se coloco pregunta, ademas esta
+      // otros generadores(@RequestBody String pregunta)
       var pregunta = "genera 5 productos ecológicos";
       return this.chatClient.prompt()
             .user(pregunta)  // userInput
