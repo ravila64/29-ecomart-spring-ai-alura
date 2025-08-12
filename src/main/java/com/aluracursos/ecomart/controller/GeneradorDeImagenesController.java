@@ -17,7 +17,7 @@ public class GeneradorDeImagenesController {
       this.imageModel = imageModel;
    }
 
-   @GetMapping   // estaba ("/ai")
+   @GetMapping
    public String generadorDeImagenes(String prompt) {
       var options = ImageOptionsBuilder.builder()
             .width(1024)
